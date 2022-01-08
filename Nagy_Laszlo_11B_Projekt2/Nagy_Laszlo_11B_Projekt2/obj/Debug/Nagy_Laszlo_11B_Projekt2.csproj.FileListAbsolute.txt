@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\bin\Debug\Nagy_Laszlo_11B_Projekt2.exe.config
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\bin\Debug\Nagy_Laszlo_11B_Projekt2.exe
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\bin\Debug\Nagy_Laszlo_11B_Projekt2.pdb
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\App.g.cs
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2_MarkupCompile.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2_MarkupCompile.lref
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2.g.resources
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2.Properties.Resources.resources
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2.exe
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Projekt2\Verdak-verseny-Projekt2\Nagy_Laszlo_11B_Projekt2\Nagy_Laszlo_11B_Projekt2\obj\Debug\Nagy_Laszlo_11B_Projekt2.pdb
