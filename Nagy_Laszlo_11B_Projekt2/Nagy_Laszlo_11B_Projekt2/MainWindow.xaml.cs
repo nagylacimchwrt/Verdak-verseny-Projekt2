@@ -20,6 +20,8 @@ namespace Nagy_Laszlo_11B_Projekt2
     /// </summary>
     public partial class MainWindow : Window
     {
+        int szamlalo = new int();
+        
         public MainWindow()
         {
             InitializeComponent();
