@@ -40,16 +40,16 @@ namespace Nagy_Laszlo_11B_Projekt2
             szelepkupa = new szelepKupa();
 
             idozito = new DispatcherTimer();
-            idozito.Interval = TimeSpan.FromMilliseconds(50);
+            idozito.Interval = TimeSpan.FromMilliseconds(30);
             idozito.Start();
             idozito.Tick += Tick;
             ujFutamGomb.IsEnabled = false;
             ujBajnoksagGomb.IsEnabled = false;
 
             verseny = new Verseny();
-            verda1 = new Verda("verda1", mcQueen, verseny, eredmenyekCimke);
-            verda2 = new Verda("verda2", Matuka, verseny, eredmenyekCimke);
-            verda3 = new Verda("verda3", docHudson, verseny, eredmenyekCimke);
+            verda1 = new Verda("verda1", mcQueen, verseny, eredmenyekCimke, palya1);
+            verda2 = new Verda("verda2", Matuka, verseny, eredmenyekCimke, palya2);
+            verda3 = new Verda("verda3", docHudson, verseny, eredmenyekCimke, palya3);
             verseny.verdak.Add(verda1);
             verseny.verdak.Add(verda2);
             verseny.verdak.Add(verda3);
@@ -79,7 +79,6 @@ namespace Nagy_Laszlo_11B_Projekt2
 
             if (verseny.verdak.Count == verseny.sorrend.Count)
             {
-                idozito.Stop();
                 foreach (Verda item in verseny.verdak)
                 {
                     if (item.pontSzam == 0)
@@ -87,6 +86,9 @@ namespace Nagy_Laszlo_11B_Projekt2
                         return;
                     }
                 }
+
+                ujFutamGomb.IsEnabled = true;
+                ujBajnoksagGomb.IsEnabled = true;
             }
         }
 
@@ -103,8 +105,9 @@ namespace Nagy_Laszlo_11B_Projekt2
             public float speed;
             public float value = 5f;
             public Label cimke;
+            public Rectangle palya;
 
-            public Verda(string name, Rectangle tgl, Verseny verseny, Label cimke)
+            public Verda(string name, Rectangle tgl, Verseny verseny, Label cimke, Rectangle palya)
             {
                 this.verseny = verseny;
                 Random rnd = new Random();
@@ -113,6 +116,7 @@ namespace Nagy_Laszlo_11B_Projekt2
                 speed = rnd.Next(1, 10);
                 start = tgl.Margin;
                 this.cimke = cimke;
+                this.palya = palya;
             }
 
             public void Mozgas(double celErtek, int rnd)
@@ -129,18 +133,27 @@ namespace Nagy_Laszlo_11B_Projekt2
                             elsoHelyekSzama++;
                             cimke.Content = "1";
                             pontSzam += 5;
+                            Color szin = Color.FromRgb(225, 223, 0);
+                            SolidColorBrush szinezes = new SolidColorBrush(szin);
+                            palya.Fill = szinezes;
                         }
                         else if(verseny.sorrend[1] == this)
                         {
                             masodikHelyekSzama++;
                             cimke.Content = "2";
                             pontSzam += 3;
+                            Color szin = Color.FromRgb(211, 211, 211);
+                            SolidColorBrush szinezes = new SolidColorBrush(szin);
+                            palya.Fill = szinezes;
                         }
                         else if(verseny.sorrend[2] == this)
                         {
                             harmadikHelyekSzama++;
                             cimke.Content = "3";
                             pontSzam += 1;
+                            Color szin = Color.FromRgb(185, 122, 68);
+                            SolidColorBrush szinezes = new SolidColorBrush(szin);
+                            palya.Fill = szinezes;
                         }
                         cimke.Visibility = Visibility.Visible;
                     }
@@ -163,6 +176,24 @@ namespace Nagy_Laszlo_11B_Projekt2
         public class szelepKupa
         {
 
+        }
+
+        private void ujFutamGomb_Click(object sender, RoutedEventArgs e)
+        {
+            mehet = false;
+            ujFutamGomb.IsEnabled = false;
+            startGomb.IsEnabled = true;
+
+            verseny.sorrend.Clear();
+            foreach (Verda x in verseny.verdak)
+            {
+                x.tgl.Margin = x.start;
+                x.value = 5f;
+                Color szin = Color.FromRgb(107, 142, 35);
+                SolidColorBrush szinezes = new SolidColorBrush(szin);
+                x.tgl.Fill = szinezes;
+                x.cimke.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

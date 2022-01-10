@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Verdák verseny" Height="760" Width="1200" ResizeMode="NoResize">
     <Grid>
-        <Rectangle x:Name="palya1" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="154" Margin="5,52,0,0" VerticalAlignment="Top" Width="1096"/>
-        <Rectangle x:Name="palya2" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="150" Margin="5,210,0,0" VerticalAlignment="Top" Width="1096"/>
-        <Rectangle x:Name="palya3" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="128" Margin="5,362,0,0" VerticalAlignment="Top" Width="1096"/>
+        <Rectangle x:Name="palya1" Fill="#6B8E23" HorizontalAlignment="Left" Height="154" Margin="5,52,0,0" VerticalAlignment="Top" Width="1096"/>
+        <Rectangle x:Name="palya2" Fill="#6B8E23" HorizontalAlignment="Left" Height="150" Margin="5,210,0,0" VerticalAlignment="Top" Width="1096"/>
+        <Rectangle x:Name="palya3" Fill="#6B8E23" HorizontalAlignment="Left" Height="128" Margin="5,362,0,0" VerticalAlignment="Top" Width="1096"/>
         <Label Content="RAJT" HorizontalAlignment="Left" Margin="151,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -37,7 +37,7 @@
         <Rectangle x:Name="celVonal" Fill="Black" HorizontalAlignment="Left" Height="442" Margin="1101,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="8"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="442" Margin="215,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
         <Button x:Name="startGomb" Content="Start" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="74" FontSize="14" Click="startGomb_Click"/>
-        <Button x:Name="ujFutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="228,10,0,0" VerticalAlignment="Top" Width="74" FontSize="14"/>
+        <Button x:Name="ujFutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="228,10,0,0" VerticalAlignment="Top" Width="74" FontSize="14" Click="ujFutamGomb_Click"/>
         <Button x:Name="ujBajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="92" FontSize="14"/>
         <Rectangle x:Name="mcQueen" HorizontalAlignment="Left" Height="180" Margin="5,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="220" StrokeThickness="0">
             <Rectangle.Fill>
@@ -58,5 +58,8 @@
         </Rectangle>
         <Label Content="A bajnokság állása:" HorizontalAlignment="Left" Margin="5,506,0,0" VerticalAlignment="Top" Width="166" FontSize="16"/>
         <Label x:Name="eredmenyekCimke" Content="" HorizontalAlignment="Left" Margin="171,512,0,0" VerticalAlignment="Top" Height="174" Width="628"/>
+        <Label x:Name="elsoPalyaHelyCimke" Content="" HorizontalAlignment="Left" Margin="605,84,0,0" VerticalAlignment="Top" Height="66" Width="82"/>
+        <Label x:Name="masodikPalyaHelyCimke" Content="" HorizontalAlignment="Left" Margin="605,238,0,0" VerticalAlignment="Top" Height="66" Width="82"/>
+        <Label x:Name="harmadikPalyaHelyCimke" Content="" HorizontalAlignment="Left" Margin="605,394,0,0" VerticalAlignment="Top" Height="66" Width="82"/>
     </Grid>
 </Window>
