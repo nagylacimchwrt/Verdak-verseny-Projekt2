@@ -191,7 +191,7 @@ namespace Nagy_Laszlo_11B_Projekt2
                 x.value = 5f;
                 Color szin = Color.FromRgb(107, 142, 35);
                 SolidColorBrush szinezes = new SolidColorBrush(szin);
-                x.tgl.Fill = szinezes;
+                x.palya.Fill = szinezes;
                 x.cimke.Visibility = Visibility.Hidden;
             }
         }
