@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Verdák verseny" Height="760" Width="1200" ResizeMode="NoResize">
     <Grid>
-        <Rectangle x:Name="palya1" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="155" Margin="26,49,0,0" VerticalAlignment="Top" Width="1125"/>
-        <Rectangle x:Name="palya2" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="150" Margin="26,207,0,0" VerticalAlignment="Top" Width="1125"/>
-        <Rectangle x:Name="palya3" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="128" Margin="26,360,0,0" VerticalAlignment="Top" Width="1125"/>
-        <Label Content="RAJT" HorizontalAlignment="Left" Margin="201,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176">
+        <Rectangle x:Name="palya1" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="154" Margin="5,52,0,0" VerticalAlignment="Top" Width="1096"/>
+        <Rectangle x:Name="palya2" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="150" Margin="5,210,0,0" VerticalAlignment="Top" Width="1096"/>
+        <Rectangle x:Name="palya3" Fill="#FFBCFB71" HorizontalAlignment="Left" Height="128" Margin="5,362,0,0" VerticalAlignment="Top" Width="1096"/>
+        <Label Content="RAJT" HorizontalAlignment="Left" Margin="151,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="CÉL" HorizontalAlignment="Left" Margin="1025,230,-8,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176">
+        <Label Content="CÉL" HorizontalAlignment="Left" Margin="975,232,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -30,19 +30,33 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Rectangle Fill="#FFBCFB71" HorizontalAlignment="Left" Height="5" Margin="26,239,0,0" Stroke="Black" VerticalAlignment="Top" Width="0"/>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="3" Stroke="Black" VerticalAlignment="Top" Width="1125" Margin="26,204,0,0"/>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="3" Stroke="Black" VerticalAlignment="Top" Width="1125" Margin="26,357,0,0"/>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="3" Stroke="Black" VerticalAlignment="Top" Width="1125" Margin="26,488,0,0"/>
-        <Rectangle x:Name="celVonal" Fill="Black" HorizontalAlignment="Left" Height="442" Margin="1142,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="9"/>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="442" Margin="264,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
-        <Button x:Name="startGomb" Content="Start" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="startGomb_Click"/>
-        <Button x:Name="ujFutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Width="75" FontSize="14"/>
-        <Button x:Name="ujBajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="285,10,0,0" VerticalAlignment="Top" Width="91" FontSize="14"/>
-        <Image x:Name="mcQueen" Margin="32,78,918,515" Source="Mcqueen.png" Stretch="Fill"/>
-        <Image x:Name="Matuka" Margin="31,193,928,371" Source="Matuka.png" Stretch="Fill"/>
-        <Image x:Name="docHudson" Margin="32,316,917,228" Source="Doc Hudson.png" Stretch="Fill"/>
-        <Label Content="A bajnokság állása:" HorizontalAlignment="Left" Margin="26,496,0,0" VerticalAlignment="Top" Width="166" FontSize="16"/>
-        <Label x:Name="eredmenyekCimke" Content="" HorizontalAlignment="Left" Margin="183,508,0,0" VerticalAlignment="Top" Height="173" Width="627"/>
+        <Rectangle Fill="#FFBCFB71" HorizontalAlignment="Left" Height="4" Margin="4,238,0,0" Stroke="Black" VerticalAlignment="Top" Width="0"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="4" Stroke="Black" VerticalAlignment="Top" Width="1096" Margin="5,206,0,0"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="4" Stroke="Black" VerticalAlignment="Top" Width="1096" Margin="5,360,0,0"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="4" Stroke="Black" VerticalAlignment="Top" Width="1096" Margin="5,490,0,0"/>
+        <Rectangle x:Name="celVonal" Fill="Black" HorizontalAlignment="Left" Height="442" Margin="1101,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="8"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="442" Margin="215,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
+        <Button x:Name="startGomb" Content="Start" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="74" FontSize="14" Click="startGomb_Click"/>
+        <Button x:Name="ujFutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="228,10,0,0" VerticalAlignment="Top" Width="74" FontSize="14"/>
+        <Button x:Name="ujBajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="92" FontSize="14"/>
+        <Rectangle x:Name="mcQueen" HorizontalAlignment="Left" Height="180" Margin="5,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="220" StrokeThickness="0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Mcqueen.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="Matuka" HorizontalAlignment="Left" Height="180" Margin="5,182,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="210">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Matuka.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="docHudson" HorizontalAlignment="Left" Height="180" Margin="15,326,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="210">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Doc Hudson.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="A bajnokság állása:" HorizontalAlignment="Left" Margin="5,506,0,0" VerticalAlignment="Top" Width="166" FontSize="16"/>
+        <Label x:Name="eredmenyekCimke" Content="" HorizontalAlignment="Left" Margin="171,512,0,0" VerticalAlignment="Top" Height="174" Width="628"/>
     </Grid>
 </Window>
