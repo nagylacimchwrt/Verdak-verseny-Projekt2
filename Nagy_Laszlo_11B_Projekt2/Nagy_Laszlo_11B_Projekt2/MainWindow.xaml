@@ -38,7 +38,7 @@
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="442" Margin="215,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
         <Button x:Name="startGomb" Content="Start" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="74" FontSize="14" Click="startGomb_Click"/>
         <Button x:Name="ujFutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="228,10,0,0" VerticalAlignment="Top" Width="74" FontSize="14" Click="ujFutamGomb_Click"/>
-        <Button x:Name="ujBajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="92" FontSize="14"/>
+        <Button x:Name="ujBajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="92" FontSize="14" Click="ujBajnoksagGomb_Click"/>
         <Rectangle x:Name="mcQueen" HorizontalAlignment="Left" Height="180" Margin="5,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="220" StrokeThickness="0">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Mcqueen.png"/>

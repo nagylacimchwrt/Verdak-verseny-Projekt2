@@ -53,6 +53,9 @@ namespace Nagy_Laszlo_11B_Projekt2
             verseny.verdak.Add(verda1);
             verseny.verdak.Add(verda2);
             verseny.verdak.Add(verda3);
+            szelepkupa.pontozasSorrend.Add(verda1);
+            szelepkupa.pontozasSorrend.Add(verda2);
+            szelepkupa.pontozasSorrend.Add(verda3);
             foreach (var item in verseny.verdak)
             {
                 item.cimke.Visibility = Visibility.Hidden;
@@ -86,6 +89,11 @@ namespace Nagy_Laszlo_11B_Projekt2
                         return;
                     }
                 }
+
+                eredmenyekCimke.Content = $"Hely        Név         1.      2.      3.          Pont" + " \n "+
+                    $"1.        {szelepkupa.pontozasSorrend[0].name}        { szelepkupa.pontozasSorrend[0].elsoHelyekSzama}       { szelepkupa.pontozasSorrend[0].masodikHelyekSzama}       { szelepkupa.pontozasSorrend[0].harmadikHelyekSzama}           { szelepkupa.pontozasSorrend[0].pontSzam}" + " \n " +   
+                    $"2.        {szelepkupa.pontozasSorrend[1].name}        { szelepkupa.pontozasSorrend[1].elsoHelyekSzama}       { szelepkupa.pontozasSorrend[1].masodikHelyekSzama}       { szelepkupa.pontozasSorrend[1].harmadikHelyekSzama}           { szelepkupa.pontozasSorrend[1].pontSzam}" + " \n " +   
+                    $"3.        {szelepkupa.pontozasSorrend[2].name}        { szelepkupa.pontozasSorrend[2].elsoHelyekSzama}       { szelepkupa.pontozasSorrend[2].masodikHelyekSzama}       { szelepkupa.pontozasSorrend[2].harmadikHelyekSzama}           { szelepkupa.pontozasSorrend[2].pontSzam}";
 
                 ujFutamGomb.IsEnabled = true;
                 ujBajnoksagGomb.IsEnabled = true;
@@ -132,7 +140,7 @@ namespace Nagy_Laszlo_11B_Projekt2
                         {
                             elsoHelyekSzama++;
                             cimke.Content = "1";
-                            pontSzam += 5;
+                            pontSzam += 3;
                             Color szin = Color.FromRgb(225, 223, 0);
                             SolidColorBrush szinezes = new SolidColorBrush(szin);
                             palya.Fill = szinezes;
@@ -141,7 +149,7 @@ namespace Nagy_Laszlo_11B_Projekt2
                         {
                             masodikHelyekSzama++;
                             cimke.Content = "2";
-                            pontSzam += 3;
+                            pontSzam += 2;
                             Color szin = Color.FromRgb(211, 211, 211);
                             SolidColorBrush szinezes = new SolidColorBrush(szin);
                             palya.Fill = szinezes;
@@ -175,6 +183,8 @@ namespace Nagy_Laszlo_11B_Projekt2
 
         public class szelepKupa
         {
+            public List<Verda> pontozasSorrend = new List<Verda>();
+
 
         }
 
@@ -193,6 +203,35 @@ namespace Nagy_Laszlo_11B_Projekt2
                 SolidColorBrush szinezes = new SolidColorBrush(szin);
                 x.palya.Fill = szinezes;
                 x.cimke.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void ujBajnoksagGomb_Click(object sender, RoutedEventArgs e)
+        {
+            string eredmeny = " A bajnokság eredményei" + " \n " + " \n " + eredmenyekCimke.Content.ToString();
+            MessageBox.Show(eredmeny);
+            foreach (Verda y in szelepkupa.pontozasSorrend)
+            {
+                y.elsoHelyekSzama = 0;
+                y.masodikHelyekSzama = 0;
+                y.harmadikHelyekSzama = 0;
+                y.pontSzam = 0;
+                eredmenyekCimke.Content = " ";
+
+                mehet = false;
+                ujFutamGomb.IsEnabled = false;
+                startGomb.IsEnabled = true;
+
+                verseny.sorrend.Clear();
+                foreach (Verda c in verseny.verdak)
+                {
+                    c.tgl.Margin = c.start;
+                    c.value = 5f;
+                    Color szin = Color.FromRgb(107, 142, 35);
+                    SolidColorBrush szinezes = new SolidColorBrush(szin);
+                    c.palya.Fill = szinezes;
+                    c.cimke.Visibility = Visibility.Hidden;
+                }
             }
         }
     }
