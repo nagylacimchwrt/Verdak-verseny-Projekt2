@@ -10,7 +10,7 @@
         <Rectangle x:Name="palya1" Fill="#6B8E23" HorizontalAlignment="Left" Height="154" Margin="5,52,0,0" VerticalAlignment="Top" Width="1096"/>
         <Rectangle x:Name="palya2" Fill="#6B8E23" HorizontalAlignment="Left" Height="150" Margin="5,210,0,0" VerticalAlignment="Top" Width="1096"/>
         <Rectangle x:Name="palya3" Fill="#6B8E23" HorizontalAlignment="Left" Height="128" Margin="5,362,0,0" VerticalAlignment="Top" Width="1096"/>
-        <Label Content="RAJT" HorizontalAlignment="Left" Margin="151,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176">
+        <Label Content="RAJT" HorizontalAlignment="Left" Margin="151,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FF131376">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="CÉL" HorizontalAlignment="Left" Margin="966,246,-34,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176" Height="86" Width="182">
+        <Label Content="CÉL" HorizontalAlignment="Left" Margin="983,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="64" Foreground="#FF131376" Height="86" Width="162">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

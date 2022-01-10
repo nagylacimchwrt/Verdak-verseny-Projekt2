@@ -30,7 +30,6 @@ namespace Nagy_Laszlo_11B_Projekt2
         szelepKupa szelepkupa;
         Random rnd = new Random();
         bool mehet = false;
-        int v = 100;
         double celErtek;
 
         public MainWindow()
@@ -47,9 +46,9 @@ namespace Nagy_Laszlo_11B_Projekt2
             ujBajnoksagGomb.IsEnabled = false;
 
             verseny = new Verseny();
-            verda1 = new Verda("verda1", mcQueen, verseny, eredmenyekCimke, palya1);
-            verda2 = new Verda("verda2", Matuka, verseny, eredmenyekCimke, palya2);
-            verda3 = new Verda("verda3", docHudson, verseny, eredmenyekCimke, palya3);
+            verda1 = new Verda("verda1", mcQueen, verseny, eredmenyekCimke, palya1, elsoPalyaHelyCimke);
+            verda2 = new Verda("verda2", Matuka, verseny, eredmenyekCimke, palya2, masodikPalyaHelyCimke);
+            verda3 = new Verda("verda3", docHudson, verseny, eredmenyekCimke, palya3, harmadikPalyaHelyCimke);
             verseny.verdak.Add(verda1);
             verseny.verdak.Add(verda2);
             verseny.verdak.Add(verda3);
@@ -89,6 +88,7 @@ namespace Nagy_Laszlo_11B_Projekt2
                         return;
                     }
                 }
+                szelepkupa.UjKupa();
 
                 eredmenyekCimke.Content = $"Hely        Név         1.      2.      3.          Pont" + " \n "+
                     $"1.        {szelepkupa.pontozasSorrend[0].name}        { szelepkupa.pontozasSorrend[0].elsoHelyekSzama}       { szelepkupa.pontozasSorrend[0].masodikHelyekSzama}       { szelepkupa.pontozasSorrend[0].harmadikHelyekSzama}           { szelepkupa.pontozasSorrend[0].pontSzam}" + " \n " +   
@@ -114,8 +114,9 @@ namespace Nagy_Laszlo_11B_Projekt2
             public float value = 5f;
             public Label cimke;
             public Rectangle palya;
+            public Label helyezesek;
 
-            public Verda(string name, Rectangle tgl, Verseny verseny, Label cimke, Rectangle palya)
+            public Verda(string name, Rectangle tgl, Verseny verseny, Label cimke, Rectangle palya, Label helyezesek)
             {
                 this.verseny = verseny;
                 Random rnd = new Random();
@@ -125,6 +126,7 @@ namespace Nagy_Laszlo_11B_Projekt2
                 start = tgl.Margin;
                 this.cimke = cimke;
                 this.palya = palya;
+                this.helyezesek = helyezesek;
             }
 
             public void Mozgas(double celErtek, int rnd)
@@ -184,6 +186,25 @@ namespace Nagy_Laszlo_11B_Projekt2
         public class szelepKupa
         {
             public List<Verda> pontozasSorrend = new List<Verda>();
+
+            public void UjKupa()
+            {
+                var vMozgas = false;
+                do
+                {
+                    vMozgas = false;
+                    for (int i = 0; i < pontozasSorrend.Count() - 1; i++)
+                    {
+                        if (pontozasSorrend[i].pontSzam < pontozasSorrend[i + 1].pontSzam)
+                        {
+                            var ertek = pontozasSorrend[i];
+                            pontozasSorrend[i] = pontozasSorrend[i + 1];
+                            pontozasSorrend[i + 1] = ertek;
+                            vMozgas = true;
+                        }
+                    }
+                } while (vMozgas);
+            }
 
 
         }
