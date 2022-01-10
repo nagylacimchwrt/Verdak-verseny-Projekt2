@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="CÉL" HorizontalAlignment="Left" Margin="975,232,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176">
+        <Label Content="CÉL" HorizontalAlignment="Left" Margin="966,246,-34,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Snap ITC" FontSize="72" Foreground="#FFD85176" Height="86" Width="182">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -51,7 +51,7 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Rectangle x:Name="docHudson" HorizontalAlignment="Left" Height="180" Margin="15,326,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="210">
+        <Rectangle x:Name="docHudson" HorizontalAlignment="Left" Height="180" Margin="0,327,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="225">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Doc Hudson.png"/>
             </Rectangle.Fill>

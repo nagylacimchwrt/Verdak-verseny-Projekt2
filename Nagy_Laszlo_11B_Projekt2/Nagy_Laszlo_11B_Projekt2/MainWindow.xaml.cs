@@ -36,7 +36,7 @@ namespace Nagy_Laszlo_11B_Projekt2
         public MainWindow()
         {
             InitializeComponent();
-            celErtek = celVonal.Margin.Right;
+            celErtek = 890;
             szelepkupa = new szelepKupa();
 
             idozito = new DispatcherTimer();
@@ -47,13 +47,16 @@ namespace Nagy_Laszlo_11B_Projekt2
             ujBajnoksagGomb.IsEnabled = false;
 
             verseny = new Verseny();
-            verda1 = new Verda("verda1", mcQueen, verseny);
-            verda2 = new Verda("verda2", Matuka, verseny);
-            verda3 = new Verda("verda3", docHudson, verseny);
+            verda1 = new Verda("verda1", mcQueen, verseny, eredmenyekCimke);
+            verda2 = new Verda("verda2", Matuka, verseny, eredmenyekCimke);
+            verda3 = new Verda("verda3", docHudson, verseny, eredmenyekCimke);
             verseny.verdak.Add(verda1);
             verseny.verdak.Add(verda2);
             verseny.verdak.Add(verda3);
-
+            foreach (var item in verseny.verdak)
+            {
+                item.cimke.Visibility = Visibility.Hidden;
+            }
         }
         private void startGomb_Click(object sender, RoutedEventArgs e)
         {
@@ -73,6 +76,18 @@ namespace Nagy_Laszlo_11B_Projekt2
             verda1.Mozgas(celErtek, rnd1);
             verda2.Mozgas(celErtek, rnd2);
             verda3.Mozgas(celErtek, rnd3);
+
+            if (verseny.verdak.Count == verseny.sorrend.Count)
+            {
+                idozito.Stop();
+                foreach (Verda item in verseny.verdak)
+                {
+                    if (item.pontSzam == 0)
+                    {
+                        return;
+                    }
+                }
+            }
         }
 
         public class Verda
@@ -87,8 +102,9 @@ namespace Nagy_Laszlo_11B_Projekt2
             public Thickness start;
             public float speed;
             public float value = 5f;
+            public Label cimke;
 
-            public Verda(string name, Rectangle tgl, Verseny verseny)
+            public Verda(string name, Rectangle tgl, Verseny verseny, Label cimke)
             {
                 this.verseny = verseny;
                 Random rnd = new Random();
@@ -96,6 +112,7 @@ namespace Nagy_Laszlo_11B_Projekt2
                 this.name = name;
                 speed = rnd.Next(1, 10);
                 start = tgl.Margin;
+                this.cimke = cimke;
             }
 
             public void Mozgas(double celErtek, int rnd)
@@ -103,8 +120,33 @@ namespace Nagy_Laszlo_11B_Projekt2
                 if (tgl.Margin.Left >= celErtek)
                 {
                     tgl.Margin = new Thickness(celErtek, tgl.Margin.Top, 0, 0);
-                }
+                    if(!verseny.sorrend.Contains(this))
+                    {
+                        verseny.sorrend.Add(this);
 
+                        if (verseny.sorrend[0] == this)
+                        {
+                            elsoHelyekSzama++;
+                            cimke.Content = "1";
+                            pontSzam += 5;
+                        }
+                        else if(verseny.sorrend[1] == this)
+                        {
+                            masodikHelyekSzama++;
+                            cimke.Content = "2";
+                            pontSzam += 3;
+                        }
+                        else if(verseny.sorrend[2] == this)
+                        {
+                            harmadikHelyekSzama++;
+                            cimke.Content = "3";
+                            pontSzam += 1;
+                        }
+                        cimke.Visibility = Visibility.Visible;
+                    }
+                    return;
+                }
+                
                 Thickness th = new Thickness(value, tgl.Margin.Top, 0, 0);
                 tgl.Margin = th;
 
@@ -115,6 +157,7 @@ namespace Nagy_Laszlo_11B_Projekt2
         public class Verseny
         {
             public List<Verda> verdak = new List<Verda>();
+            public List<Verda> sorrend = new List<Verda>();
         }
 
         public class szelepKupa
